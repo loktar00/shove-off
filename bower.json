@@ -1,0 +1,29 @@
+{
+  "name": "shove-off",
+  "version": "1.0.0",
+  "homepage": "https://github.com/loktar00/shove-off",
+  "authors": [
+    "Jason Brown <loktar69@hotmail.com>"
+  ],
+  "description": "Offcanvas menu for responsive sites",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "offcanvas",
+    "menu",
+    "mobile",
+    "menu",
+    "responsive",
+    "menu",
+    "menu"
+  ],
+  "license": "Apache",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

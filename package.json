@@ -1,0 +1,31 @@
+{
+  "name": "shove-off",
+  "version": "1.0.0",
+  "description": "Offcanvas menu created for responsive sites",
+  "main": "index.html",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loktar00/shove-off.git"
+  },
+  "keywords": [
+    "offcanvas",
+    "menu",
+    "menu",
+    "mobile",
+    "menu",
+    "responsive",
+    "menu"
+  ],
+  "author": "Jason Brown",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/loktar00/shove-off/issues"
+  },
+  "homepage": "https://github.com/loktar00/shove-off"
+}
