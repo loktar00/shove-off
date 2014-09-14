@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+        <title>Shove Off menu</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="examples/css/styles.css">
+        <link rel="stylesheet" href="dist/shoveoff.css">
+    </head>
+    <body>
+        <div class="nav-toggle">
+            <div class="icon menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> 
+        </div>
+        <nav role="navigation" class="mobile-navigation">
+            <ol>
+                <li>
+                    <h3>Menu Section 1</h3>
+                    <ul>
+                        <li>
+                            <a href="#">Menu Item 1</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Menu Section 2</h3>
+                    <ul>
+                        <li><a href="#">Menu Item 1</a></li>
+                        <li><a href="#">Menu Item 2</a></li>
+                        <li><a href="#">Menu Item 3</a></li>
+                        <li><a href="#">Menu Item 4</a></li>
+                        <li><a href="#">Menu Item 5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Menu Section 3</h3>
+                    <ul>
+                        <li><a href="#">Menu Item 1</a></li>
+                        <li><a href="#">Menu Item 2</a></li>
+                        <li><a href="#">Menu Item 3</a></li>
+                        <li><a href="#">Menu Item 4</a></li>
+                        <li><a href="#">Menu Item 5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Menu Section 4</h3>
+                    <ul>
+                        <li><a href="#">Menu Item 1</a></li>
+                        <li><a href="#">Menu Item 2</a></li>
+                        <li><a href="#">Menu Item 3</a></li>
+                        <li><a href="#">Menu Item 4</a></li>
+                        <li><a href="#">Menu Item 5</a></li>
+                    </ul>
+                </li>
+            </ol>
+        </nav>
+        <main>
+            <h1>Shove Off Menu 1.0</h1>
+            <p>Shove Off Menu is a light-weight off-canvas menu that was born out of the frustration over other menus. This was originally inspired by the menu <a href="https://github.com/christophery/pushy">pushy</a> however it bares little resemblence now. I needed a menu that utilized css animations, was light weight, and was able to be used with Browserify. I also still wanted full control of the menu markup structure.</p>
+            <h2>Usage</h2>
+            <p>
+                Currently therea re very few options. To use the menu with its default settings call it on your menu element.
+            </p>
+            <pre>$('.mobile-navigation').shoveoff();</pre>
+    
+            <h2>Controlling Menu Width</h2>
+            <p>Shove Off uses less for its styles in order to control how far the menu opens you need only to modify <code>@mobile-menu-width</code> in <code>shoveoff.less</code></p>
+            <h2>CSS Classes and Elements</h2>
+            <p>Shove Off adds a few css classes and one element in order to operate.</p>
+            <h3>Elements</h3>
+            <pre>&lt;div class="menu-blocker"&gt;&lt;/div&gt;</pre>
+            <p>The div with the class menu blocker fills the page where the menu is not located, it captures the mousedown and touchstart events in order to close the menu.</p>
+            <h3>Classes</h3>
+            <ul>
+                <li><code>.menu-transition-animation</code> - Used to animate the menu transition</li>
+                <li><code>.shove-active</code> - Added to the body sets <code>overflow-x:hidden</code></li>
+                <li><code>.shove</code> - Added to all elements except navigation in order to shove them over.</li>
+                <li><code>.offcanvas-left</code> - Added to the menu when its off the page</li>
+                <li><code>.offcanvas-open</code> - Added to the menu to bring it onto the page</li>
+            </ul>
+        </main>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="dist/shoveoff.min.js"></script>
+        <script>
+        $(function(){
+            // for the icon toggler
+            $('.icon').on('click', function() {
+                $(this).toggleClass('open');
+            });
+
+            // Initiate the shoveoff plugin
+             $('.mobile-navigation').shoveoff();
+
+             $('body').on('touchstart mousedown', '.menu-blocker', function(){
+                $('.icon').toggleClass('open');
+             });
+         });
+        </script>
+    </body>
+</html>

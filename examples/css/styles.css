@@ -1,0 +1,181 @@
+html{    
+  font-family: 'Roboto', sans-serif;
+  background: url(../media/p6.png);
+  height:100%;
+  color: #333;
+  line-height: 1.428571429;
+}
+
+a{
+  text-decoration: none;
+  color: #57ad68;
+}
+
+main{
+  margin:0 auto;
+  padding:20px;
+  width: 50%;
+  min-width: 300px;
+}
+
+h1,h2,h3,h4{
+  font-weight: 700;
+}
+
+h1{
+  border-bottom: 1px solid #57ad68;
+}
+
+pre, code{
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+pre{
+  background: #fff;
+  border:1px solid #57ad68;
+  padding:10px;
+}
+
+/*
+From the Amazing Hugo Darby-Brown
+http://codepen.io/hugo/pen/LmJsf
+========= Menu Icon Base ======== 
+*/
+.menu-icon, .nav-toggle {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 5px;
+  height: 5em;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out;
+  width: 6em;
+  -webkit-tap-highlight-color: transparent;
+}
+.menu-icon  span {
+  background: #333;
+  border-radius: 2em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 0.8em;
+  position: absolute;
+  -webkit-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out;
+  width: 50%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-icon span:nth-child(1) {
+  border-radius: 2em 0 0 2em;
+  left: 0;
+  top: 1em;
+}
+.menu-icon span:nth-child(2) {
+  border-radius: 0 2em 2em 0;
+  top: 1em;
+  right: 0;
+}
+.menu-icon span:nth-child(3) {
+  left: 0;
+  top: 2.6em;
+  width: 100%;
+}
+.menu-icon span:nth-child(4) {
+  border-radius: 2em 0 0 2em;
+  left: 0;
+  top: 4.2em;
+}
+.menu-icon span:nth-child(5) {
+  border-radius: 0 2em 2em 0;
+  right: 0;
+  top: 4.2em;
+}
+.open.menu-icon span:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(0.8em);
+      -ms-transform: rotate(45deg) translate(0.8em);
+          transform: rotate(45deg) translate(0.8em);
+}
+.open.menu-icon span:nth-child(2) {
+  -webkit-transform: rotate(-45deg) translate(-0.9em);
+      -ms-transform: rotate(-45deg) translate(-0.9em);
+          transform: rotate(-45deg) translate(-0.9em);
+}
+.open.menu-icon span:nth-child(3) {
+  opacity: 0;
+}
+.open.menu-icon span:nth-child(4) {
+  -webkit-transform: rotate(-45deg) translate(0.8em);
+      -ms-transform: rotate(-45deg) translate(0.8em);
+          transform: rotate(-45deg) translate(0.8em);
+}
+.open.menu-icon span:nth-child(5) {
+  -webkit-transform: rotate(45deg) translate(-0.9em);
+      -ms-transform: rotate(45deg) translate(-0.9em);
+          transform: rotate(45deg) translate(-0.9em);
+}
+
+
+/* Mobile menu styles */
+.mobile-navigation {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  min-height: 100%;
+  background: #333333;
+  z-index: -1;
+  overflow: auto;
+}
+.mobile-navigation h3 {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #eeeeee;
+  font-weight: normal;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #2b2b2b;
+}
+.mobile-navigation::-webkit-scrollbar-track {
+  background-color: #333333;
+}
+.mobile-navigation::-webkit-scrollbar {
+  width: 4px;
+  background-color: #4a4a4a;
+}
+.mobile-navigation::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+}
+.mobile-navigation ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mobile-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s linear;
+  -moz-transition: max-height 0.3s linear;
+  -o-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear;
+  color: #eeeeee;
+}
+.mobile-navigation ul li {
+  background: #333333;
+  border-bottom: 1px solid #2b2b2b;
+  padding: 8px;
+}
+.mobile-navigation ul ul li:last-child {
+  border-bottom: none;
+}
+.mobile-navigation a {
+  color: #eeeeee;
+}
+.mobile-navigation .visible {
+  max-height: 500px;
+}
