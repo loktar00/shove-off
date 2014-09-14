@@ -1,7 +1,7 @@
 Shove Off Menu
 ===
 
-### [Live Demo](loktar00.github.io/shove-off)
+### [Live Demo](https://loktar00.github.io/shove-off)
 
 Shove Off Menu is a light-weight off-canvas menu that was born out of the frustration over other menus. This was originally inspired by the menu [pushy](https://github.com/christophery/pushy) however it bares little resemblence. I needed a menu that utilized css animations, was light weight, and was able to be used with Browserify. I also still wanted full control of the menu markup structure.
 
